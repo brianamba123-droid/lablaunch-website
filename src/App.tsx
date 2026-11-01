@@ -376,15 +376,15 @@ function LaboratoryTools() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <FadeIn>
-            <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">Tools by LabLaunch</p>
+            <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">Tools for the Laboratory Community</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0b1f3a] mb-5 leading-tight">
-              Practical Laboratory Tools, Built by a Small Team.
+              Practical Tools. Shared to Help Laboratories.
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-5">
-              Alongside consulting, LabLaunch develops digital tools shaped by real laboratory workflows. We build focused products to help laboratory teams organize quality and operational work without the overhead of a one-size-fits-all platform.
+              We create practical digital tools in response to the everyday challenges laboratories face. Our aim is to make useful workflows and resources more accessible, and to contribute something meaningful to the laboratory community.
             </p>
             <p className="text-slate-600 text-base leading-relaxed">
-              We are a small, hands-on team, developing these tools independently and improving them with laboratory users in mind.
+              These tools are a work in progress. We welcome feedback from laboratory professionals so we can keep learning, improve what we build, and make it more useful to the people and communities it serves.
             </p>
           </FadeIn>
           <FadeIn delay={100}>
@@ -395,7 +395,7 @@ function LaboratoryTools() {
                     <Ico d={I.flask} size={22} className="text-teal-700" />
                   </div>
                   <div>
-                    <p className="text-teal-700 text-xs font-semibold tracking-widest uppercase">Developed by LabLaunch</p>
+                    <p className="text-teal-700 text-xs font-semibold tracking-widest uppercase">A community-minded lab tool</p>
                     <h3 className="text-2xl font-extrabold text-[#0b1f3a]">LabGuard</h3>
                   </div>
                 </div>
@@ -403,7 +403,7 @@ function LaboratoryTools() {
                   A laboratory quality-control and internal-audit workspace with QC result tracking, Levey–Jennings charts, Westgard evaluations, audit and CAPA workflows, and inventory tools.
                 </p>
                 <p className="text-slate-500 text-xs leading-relaxed mb-6">
-                  LabGuard supports laboratory recordkeeping and review; it does not replace approved laboratory procedures, professional judgment, or regulatory requirements. Product access may be supported through subscriptions and clearly identified sponsor placements.
+                  Built to help make quality-control and internal-audit work more organized and approachable. LabGuard supports recordkeeping and review; it does not replace approved laboratory procedures, professional judgment, or regulatory requirements.
                 </p>
                 <a href={LABGUARD_URL} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#0b1f3a] hover:bg-[#112b4d] text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm">
@@ -425,7 +425,7 @@ function LaboratoryTools() {
                   A laboratory request and specimen workflow for receiving, section queues, staff accounts, and audit exports. Patient records are stored on the laboratory host and are not uploaded to LabLaunch.
                 </p>
                 <p className="text-slate-500 text-xs leading-relaxed mb-6">
-                  The Windows host installer is being prepared for download. LabQueue requires local network setup and is not a cloud-hosted service. The installer is unsigned, and the software has not been validated as a clinical system; review the setup guide and complete appropriate security, privacy, and clinical checks before use.
+                  Created to support laboratories looking for a practical, locally run workflow. LabQueue requires local network setup and is not a cloud-hosted service. The installer is unsigned, and the software has not been validated as a clinical system; review the setup guide and complete appropriate security, privacy, and clinical checks before use.
                 </p>
                 {LABQUEUE_DOWNLOAD_URL ? (
                   <a href={LABQUEUE_DOWNLOAD_URL} download
@@ -640,7 +640,7 @@ function About() {
                 LabLaunch brings these areas together — helping laboratory owners and organizations navigate the process with greater clarity, structure, and confidence. Our goal is to help laboratories <span className="text-[#0b1f3a] font-semibold">start right, operate effectively, and build systems that can grow with them.</span>
               </p>
               <p className="text-slate-600 text-base leading-relaxed mb-8">
-                We are a small, hands-on team and also develop practical laboratory tools, including LabGuard, our quality-control and internal-audit workspace.
+                Alongside our consulting work, we develop practical tools such as LabGuard to share useful ideas and support the wider laboratory community. We continue learning from the people who use and improve these tools.
               </p>
             </FadeIn>
             <FadeIn delay={150}>
