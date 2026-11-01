@@ -1,0 +1,11 @@
+{
+  "title": "LabLaunch Consulting | Laboratory Consulting & Tools",
+  "description": "Laboratory planning, setup, compliance preparation, documentation, supplier coordination, operational support, and LabGuard tools developed by LabLaunch Consulting in Mindanao, Philippines.",
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
