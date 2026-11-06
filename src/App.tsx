@@ -155,10 +155,14 @@ function Nav() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#0b1f3a]/97 backdrop-blur-sm shadow-lg" : "bg-[#0b1f3a]"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-18">
-          <a href="#home" className="flex items-center group">
+          <a href="#home" className="flex items-center gap-3 group">
             <div className="rounded-xl overflow-hidden ring-1 ring-white/10 group-hover:ring-white/25 transition-all duration-200 bg-[#071426]">
-              <img src={logoImg} alt="LabLaunch Consulting" className="h-11 w-11 object-cover block" />
+              <img src={logoImg} alt="" className="h-11 w-11 object-cover block" />
             </div>
+            <span className="flex flex-col leading-tight">
+              <span className="text-white font-extrabold tracking-tight">LabLaunch</span>
+              <span className="text-slate-400 text-[10px] font-medium tracking-wide">LABORATORY QUALITY ADVOCACY</span>
+            </span>
           </a>
           <nav className="hidden lg:flex items-center gap-6">
             {links.map(l => (
@@ -209,30 +213,30 @@ function Hero() {
           <FadeIn>
             <div className="inline-flex items-center gap-2 text-teal-400 text-xs font-semibold tracking-widest uppercase mb-6 border border-teal-500/30 bg-teal-500/10 px-3 py-1.5 rounded-full">
               <Ico d={I.mapPin} size={12} />
-              Based in Tangub City &bull; Serving Selected Areas Across Mindanao
+              Laboratory quality advocacy rooted in Mindanao
             </div>
           </FadeIn>
           <FadeIn delay={100}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.08] tracking-tight mb-6">
-              Building Laboratories<br className="hidden sm:block" />{" "}
-              <span className="text-teal-400">on the Right Foundation.</span>
+              Advancing Laboratory<br className="hidden sm:block" />{" "}
+              <span className="text-teal-400">Result Quality in the Philippines.</span>
             </h1>
           </FadeIn>
           <FadeIn delay={200}>
             <p className="text-slate-300 text-lg sm:text-xl leading-relaxed mb-4 max-w-2xl">
-              Laboratory consulting and coordination services — from planning and documentation to equipment, suppliers, and operations.
+              We champion practical, sustainable improvements that help laboratory teams strengthen confidence in their test results.
             </p>
             <p className="text-slate-400 text-base leading-relaxed mb-10 max-w-2xl">
-              LabLaunch Consulting helps healthcare professionals and organizations navigate the process of turning a laboratory concept into a functioning, organized, and compliant laboratory.
+              Through quality-focused tools, resources, and consulting, we support laboratory teams and organizations. Our consulting services are based in Tangub City and available in selected areas across Mindanao.
             </p>
           </FadeIn>
           <FadeIn delay={300}>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-500 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-150 text-sm">
-                Start Your Laboratory Project <Ico d={I.arrowRight} size={16} />
+                Explore Quality Tools <Ico d={I.arrowRight} size={16} />
               </a>
-              <a href="#services" className="inline-flex items-center justify-center gap-2 border border-white/25 hover:border-white/50 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-150 text-sm hover:bg-white/5">
-                Explore Our Services
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 border border-white/25 hover:border-white/50 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-150 text-sm hover:bg-white/5">
+                Work With LabLaunch
               </a>
             </div>
           </FadeIn>
@@ -246,23 +250,20 @@ function Hero() {
 /* ─── Trust Strip ────────────────────────────────────────────────── */
 function TrustStrip() {
   const pillars = [
-    { icon: I.flask, label: "Planning & Setup" },
-    { icon: I.shield, label: "Regulatory Compliance" },
-    { icon: I.document, label: "Documentation & SOPs" },
-    { icon: I.box, label: "Equipment Planning" },
-    { icon: I.truck, label: "Supplier Coordination" },
-    { icon: I.trending, label: "Operations Support" },
+    { icon: I.target, label: "Quality Improvement" },
+    { icon: I.flask, label: "Quality Control" },
+    { icon: I.document, label: "Audits & Documentation" },
+    { icon: I.users, label: "Laboratory Teams" },
+    { icon: I.shield, label: "Reliable Systems" },
+    { icon: I.trending, label: "Continuous Learning" },
   ];
   return (
     <section className="bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <FadeIn className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-shrink-0 bg-white border border-slate-200 rounded-2xl px-8 py-5 text-center shadow-sm">
-            <div className="flex items-end justify-center gap-1 mb-0.5">
-              <span className="text-4xl font-extrabold text-[#0b1f3a] leading-none">[#]</span>
-              <span className="text-2xl font-extrabold text-teal-500 leading-none mb-0.5">+</span>
-            </div>
-            <p className="text-slate-700 font-semibold text-sm">Laboratories Assisted</p>
+            <p className="text-teal-700 text-[10px] font-bold tracking-widest uppercase mb-2">Our Commitment</p>
+            <p className="text-[#0b1f3a] font-extrabold text-lg leading-tight">Better Laboratory<br />Result Quality</p>
           </div>
           <div className="flex flex-wrap justify-center gap-2.5 flex-1">
             {pillars.map((p, i) => (
@@ -315,9 +316,9 @@ function Services() {
     },
     {
       icon: I.trending,
-      title: "Laboratory Operations Support",
-      desc: "Assistance for existing laboratories with workflow, documentation, equipment, procurement, and operational improvement — building systems that can grow with you.",
-      points: ["Workflow and process improvement", "Ongoing documentation support", "Quality and compliance maintenance"],
+      title: "Quality Improvement & Operations Support",
+      desc: "Support for existing laboratories to strengthen quality systems, QC review, audit readiness, documentation, workflows, and corrective-action follow-through — tailored to each laboratory's context and resources.",
+      points: ["QC and internal-audit workflows", "Process and documentation improvement", "Ongoing quality and compliance support"],
     },
   ];
   return (
@@ -327,10 +328,10 @@ function Services() {
           <FadeIn>
             <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">Our Services</p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0b1f3a] mb-4">
-              Consulting That Covers the Full Picture
+              Practical Support for Better Laboratory Quality
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed">
-              From planning and licensing to equipment, suppliers, and day-to-day operations — practical support at every stage of the laboratory lifecycle.
+              We connect quality improvement with the systems behind it: capable teams, sound documentation, dependable workflows, and fit-for-purpose tools.
             </p>
           </FadeIn>
         </div>
@@ -376,15 +377,15 @@ function LaboratoryTools() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <FadeIn>
-            <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">Tools for the Laboratory Community</p>
+            <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">Tools for Better Laboratory Quality</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0b1f3a] mb-5 leading-tight">
-              Practical Tools. Shared to Help Laboratories.
+              Practical Tools. Stronger Quality Systems.
             </h2>
             <p className="text-slate-600 text-base leading-relaxed mb-5">
-              We create practical digital tools in response to the everyday challenges laboratories face. Our aim is to make useful workflows and resources more accessible, and to contribute something meaningful to the laboratory community.
+              We advocate for better laboratory result quality by making practical quality-control, audit, and workflow tools more accessible to laboratory teams in the Philippines.
             </p>
             <p className="text-slate-600 text-base leading-relaxed">
-              These tools are a work in progress. We welcome feedback from laboratory professionals so we can keep learning, improve what we build, and make it more useful to the people and communities it serves.
+              Tools alone cannot guarantee accurate results. They are designed to support—not replace—professional judgment, approved procedures, and each laboratory's quality system. We welcome feedback from laboratory professionals as we continue to improve them.
             </p>
           </FadeIn>
           <FadeIn delay={100}>
@@ -570,9 +571,9 @@ function WhyLabLaunch() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <FadeIn>
-            <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">Why Choose Us</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0b1f3a] mb-4">Why Work With LabLaunch?</h2>
-            <p className="text-slate-500 text-base leading-relaxed">There are many decisions to make when establishing a laboratory. Here is why clients choose LabLaunch Consulting.</p>
+            <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">Our Approach</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0b1f3a] mb-4">Quality Improvement, Grounded in Practice</h2>
+            <p className="text-slate-500 text-base leading-relaxed">We pair laboratory-focused experience with practical support shaped around the people, processes, and resources behind every result.</p>
           </FadeIn>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -627,20 +628,20 @@ function About() {
           <div className="order-1 lg:order-2">
             <FadeIn>
               <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">About LabLaunch</p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0b1f3a] mb-6 leading-tight">Building Laboratories on the Right Foundation.</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0b1f3a] mb-6 leading-tight">Better Results Begin with Better Laboratory Systems.</h2>
             </FadeIn>
             <FadeIn delay={80}>
               <p className="text-slate-600 text-base leading-relaxed mb-5">
-                LabLaunch Consulting was created to help laboratories establish stronger foundations from the beginning.
+                LabLaunch exists to champion better laboratory result quality in the Philippines.
               </p>
               <p className="text-slate-600 text-base leading-relaxed mb-5">
-                Starting and operating a laboratory involves more than equipment and testing. It requires careful planning, regulatory preparation, organized documentation, reliable suppliers, and well-defined workflows.
+                Every laboratory result can inform an important health decision. Confidence in those results depends on capable people, sound quality systems, dependable workflows, and a commitment to continuous improvement.
               </p>
               <p className="text-slate-600 text-base leading-relaxed mb-5">
-                LabLaunch brings these areas together — helping laboratory owners and organizations navigate the process with greater clarity, structure, and confidence. Our goal is to help laboratories <span className="text-[#0b1f3a] font-semibold">start right, operate effectively, and build systems that can grow with them.</span>
+                We bring practical tools, learning resources, and laboratory consulting together to help teams strengthen the systems behind their work. Our goal is to support laboratories as they <span className="text-[#0b1f3a] font-semibold">build reliable processes, learn from their quality data, and improve over time.</span>
               </p>
               <p className="text-slate-600 text-base leading-relaxed mb-8">
-                Alongside our consulting work, we develop practical tools such as LabGuard to share useful ideas and support the wider laboratory community. We continue learning from the people who use and improve these tools.
+                Our work is rooted in Tangub City, with consulting available in selected areas across Mindanao. Our advocacy for stronger laboratory quality reaches beyond our service area through tools and resources for the wider Philippine laboratory community.
               </p>
             </FadeIn>
             <FadeIn delay={150}>
@@ -736,9 +737,9 @@ function ServiceArea() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <FadeIn>
             <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">Service Area</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0b1f3a] mb-5">Serving Laboratories Across Mindanao</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0b1f3a] mb-5">Local Roots. A Philippines-Wide Quality Commitment.</h2>
             <p className="text-slate-600 text-lg leading-relaxed mb-8">
-              Based in Tangub City, Misamis Occidental, LabLaunch Consulting provides consulting support in Tangub City and selected locations throughout Mindanao. On-site consulting may be available depending on project requirements and location.
+              LabLaunch is based in Tangub City, Misamis Occidental. Consulting and on-site support are available in selected areas across Mindanao, depending on project requirements and location. Our commitment to better laboratory result quality in the Philippines is shared through practical tools and resources.
             </p>
             <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm">
               Discuss Your Location With Us <Ico d={I.arrowRight} size={15} />
@@ -788,14 +789,14 @@ function ConsultationCTA() {
         style={{ backgroundImage: "radial-gradient(circle at 30% 50%, #14b8a6 0%, transparent 60%), radial-gradient(circle at 80% 20%, #0d9488 0%, transparent 50%)" }} />
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeIn>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5">Planning to Start or Improve a Laboratory?</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5">Ready to Strengthen Your Laboratory's Quality Systems?</h2>
           <p className="text-slate-300 text-xl leading-relaxed mb-3 max-w-2xl mx-auto font-medium">
-            Let&apos;s build your laboratory on the right foundation.
+            Make quality improvement part of everyday laboratory practice.
           </p>
           <p className="text-teal-400 text-sm mb-10">No obligation. We&apos;ll discuss your project and identify the right next steps.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-500 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-base">
-              Start Your Laboratory Project <Ico d={I.arrowRight} size={17} />
+              Explore Our Quality Tools <Ico d={I.arrowRight} size={17} />
             </a>
             <a href="#contact" className="inline-flex items-center justify-center gap-2 border border-white/25 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-base hover:bg-white/5">
               Contact LabLaunch
@@ -811,7 +812,8 @@ function ConsultationCTA() {
 function FAQ() {
   const [active, setActive] = useState<number | null>(null);
   const items = [
-    { q: "Can LabLaunch Consulting help me start a new laboratory?", a: "Yes. We provide consulting and coordination support covering planning, documentation, equipment, supplier coordination, regulatory preparation, and operational readiness." },
+    { q: "What does LabLaunch mean by advocating for laboratory result quality?", a: "We promote practical quality improvement through tools, learning resources, and laboratory consulting. Our work supports laboratory teams; it does not replace professional judgment, approved procedures, or the role of regulatory authorities." },
+    { q: "Can LabLaunch help me start a new laboratory?", a: "Yes. We provide consulting and coordination support covering planning, documentation, equipment, supplier coordination, regulatory preparation, and operational readiness." },
     { q: "Do you assist with DOH regulatory requirements?", a: "Yes. LabLaunch provides guidance and preparation support for applicable DOH laboratory requirements and regulatory assessment. Final approval and licensing decisions remain with the appropriate regulatory authority." },
     { q: "Can you help with supplier coordination and procurement?", a: "Yes. This is one of our core services. We assist with supplier communication, quotation requests, product comparisons, and procurement coordination to make the purchasing process more organized." },
     { q: "Can you prepare laboratory SOPs and documents?", a: "Yes. Laboratory documentation development — including SOPs, policies, forms, manuals, and records — is one of our primary services." },
@@ -886,7 +888,7 @@ function Contact() {
     e.preventDefault();
     const locationStr = [form.city, form.province, form.region].filter(Boolean).join(", ") || "Not specified";
     const emailData = {
-      _subject: "New Consultation Request - LabLaunch Consulting",
+      _subject: "New Laboratory Quality Inquiry - LabLaunch",
       _template: "table",
       _replyto: form.email,
       name: form.name,
@@ -931,9 +933,9 @@ function Contact() {
           <div className="lg:col-span-2">
             <FadeIn>
               <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-3">Get In Touch</p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0b1f3a] mb-5 leading-tight">Let&apos;s Build Your Laboratory.</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0b1f3a] mb-5 leading-tight">Let&apos;s Improve Laboratory Quality Together.</h2>
               <p className="text-slate-600 text-base leading-relaxed mb-8">
-                Whether you&apos;re planning a new laboratory, improving an existing one, or interested in supplier partnership — reach out to discuss how we can help.
+                Whether you&apos;re strengthening a quality system, planning a laboratory, or exploring a partnership, reach out and tell us what your team needs.
               </p>
             </FadeIn>
             <FadeIn delay={100}>
@@ -1142,12 +1144,13 @@ function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-5">
               <div className="inline-block rounded-2xl overflow-hidden ring-1 ring-white/10 bg-[#071426]">
-                <img src={logoImg} alt="LabLaunch Consulting" className="h-20 w-20 object-cover block" />
+                <img src={logoImg} alt="" className="h-20 w-20 object-cover block" />
               </div>
+              <p className="text-white text-xl font-extrabold tracking-tight mb-1">LabLaunch</p>
+              <p className="text-teal-400 text-[10px] font-semibold tracking-widest uppercase mb-3">Laboratory Quality Advocacy</p>
             </div>
-            <p className="text-slate-400 text-sm italic mb-3">Building Laboratories on the Right Foundation.</p>
-            <p className="text-slate-500 text-xs leading-relaxed mb-4">
-              Planning &bull; Compliance &bull; Documentation &bull; Equipment &bull; Supplier Coordination &bull; Operations
+              <p className="text-slate-500 text-xs leading-relaxed mb-4">
+                Championing better laboratory result quality through practical tools, resources, and consulting.
             </p>
             <a href={LABGUARD_URL} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-teal-400 hover:text-teal-300 text-xs font-semibold transition-colors mb-4">
@@ -1189,8 +1192,8 @@ function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
-          <p className="flex items-center gap-3">&copy; 2026 LabLaunch Consulting. All rights reserved. &nbsp;<Link to="/client/login" className="text-slate-500 hover:text-teal-400 transition-colors text-xs underline underline-offset-2">Client Portal</Link> &nbsp;<Link to="/admin/login" className="text-slate-500 hover:text-teal-400 transition-colors text-xs underline underline-offset-2">Admin Portal (temporarily disabled)</Link></p>
-          <p className="text-center">LabLaunch Consulting provides professional guidance and coordination assistance. Regulatory approvals remain with the appropriate authorities.</p>
+          <p className="flex items-center gap-3">&copy; 2026 LabLaunch. All rights reserved. &nbsp;<Link to="/client/login" className="text-slate-500 hover:text-teal-400 transition-colors text-xs underline underline-offset-2">Client Portal</Link> &nbsp;<Link to="/admin/login" className="text-slate-500 hover:text-teal-400 transition-colors text-xs underline underline-offset-2">Admin Portal (temporarily disabled)</Link></p>
+          <p className="text-center">LabLaunch advances laboratory quality through practical advocacy, tools, resources, and professional consulting. Regulatory approvals remain with the appropriate authorities.</p>
         </div>
       </div>
     </footer>
